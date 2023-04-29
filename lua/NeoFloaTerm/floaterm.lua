@@ -8,7 +8,7 @@ end
 function NeoFloatTerm:new()
   -- init defaults
   local term_defaults = { config = nil }
-  setmetatable(term_defaults, { __index = self })
+  return setmetatable(term_defaults, { __index = self })
 end
 
 function NeoFloatTerm:setup(config)
@@ -74,3 +74,5 @@ end
 
 function NeoFloatTerm:toggle()
 end
+
+return NeoFloatTerm
